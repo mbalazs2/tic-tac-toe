@@ -1012,6 +1012,19 @@ def winner():
             else:
                 button9.config(text=x_0()[1],state='disabled',disabledforeground='black')
                 
+# defense against middle strategy - second move
+
+        elif count==4 and button5['text']==x_0()[0] and (button1['text']==x_0()[0] or button3['text']==x_0()[0] \
+             or button7['text']==x_0()[0] or button9['text']==x_0()[0]):
+            if button1['text']=='':
+                button1.config(text=x_0()[1],state='disabled',disabledforeground='black')
+            elif button3['text']=='':
+                button3.config(text=x_0()[1],state='disabled',disabledforeground='black')
+            elif button7['text']=='':
+                button7.config(text=x_0()[1],state='disabled',disabledforeground='black')
+            else:
+                button9.config(text=x_0()[1],state='disabled',disabledforeground='black')
+
 # defense against diagonal corners strategy 
                
         elif count==4 and ((button1['text']==x_0()[0] and button9['text']==x_0()[0]) or \
